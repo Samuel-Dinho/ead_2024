@@ -58,3 +58,9 @@ function Multiplica(){
     var resultado6 = document.getElementById('resultado6');
     resultado6.innerHTML = "O "+ numero +" multiplicado por 10 é igual a: " + multiplicaPorDez(numero);
 }
+function ConverteString(){
+    var string = document.getElementById("string").value;
+    var resultado5 = document.getElementById('resultado5');
+
+    resultado5.innerHTML = string.toLowerCase();
+}
