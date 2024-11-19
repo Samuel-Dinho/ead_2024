@@ -1,19 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OT_04</title>
     <script src="script.js"></script>
 </head>
+
 <body>
     <div>
-        <p > Classificação por Idade: Escreva um programa que classifica uma pessoa
+        <p> Classificação por Idade: Escreva um programa que classifica uma pessoa
             em categorias de idade: 'criança' (menos de 13 anos), 'adolescente' (entre 13 e
             17 anos), 'adulto' (entre 18 e 64 anos) e 'idoso' (65 anos ou mais). Use a
             estrutura if/else/else if.</p>
-    <input id='info' type="text" onchange="idade()">
-</div>
-    <div id="resultado"></div>
+        <input id='info' type="number">
+        <button onclick="idade()">Enviar</button>
+        <div id="resultado"></div>
+    </div>
+    <div>
+        <p>
+            Jogo de Adivinhação com Switch: Desenvolva um jogo simples de
+            adivinhação onde o usuário tenta adivinhar um número entre 1 e 5. Use
+            switch para verificar a escolha e imprimir se acertou ou não.
+        </p>
+        <input id='input-resposta' type="text">
+        <button onclick="envSwitch()">Enviar</button>
+        <div id="resultadoSwitch"></div>
+    </div>
+    <div>
+        <p>
+            Avaliação de Notas: Crie um programa que, dada uma nota de um aluno,
+            classifica a nota como 'Reprovado' (menos de 6), 'Recuperação' (entre 6 e 7),
+            ou 'Aprovado' (mais de 7). Use switch.
+        </p>
+        <input id='input-nota' type="text">
+        <button onclick="envNota()">Enviar</button>
+        <div id="resultadoNota"></div>
+    </div>
+
 </body>
+
 </html>
