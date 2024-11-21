@@ -21,10 +21,20 @@ Verifique se o objeto original foi alterado.
 Object.keys() para listar todas as chaves do objeto. Repita o
 processo com Object.values() para listar todos os valores.
 */
+function Livro(){
+    let livro = {
+        titulo: 'cronicas de não sei quem',
+        autor: 'não sei quem'
+    };
+    let info = livro;
+    info.titulo = 'cronicas de sei quem';
+    console.log(info.titulo);
+}
+
 let car = {
-    marca :'Fiat',
-    modelo :'Uno',
-    ano :'2025'
+    marca: 'Fiat',
+    modelo: 'Uno',
+    ano: '2025'
 }
 function DisplayCar() {
     var mostrar = document.getElementById('mostrar'); // Obtém o elemento HTML onde você quer exibir as informações
@@ -47,23 +57,54 @@ function ModificarCarro() {
     let radio = document.querySelector('input[name=opcao]:checked'); // obtém o radio selecionado
 
     if (!radio) {
-        return false; // Se nenhum rádio for selecionado, retorna false
-    }
-
-    let modificar = document.getElementById('modificar').value; // pega o valor a ser alterado
-    let car = {}; // Supondo que a variável car seja um objeto já definido ou preenchido anteriormente.
-
-    // Atribuição com base na escolha do usuário
-    if (radio.value == "Marca") {
-        car.marca = modificar;
-    } else if (radio.value == "Modelo") {
-        car.modelo = modificar;
-    } else if (radio.value == "Ano") {
-        car.ano = modificar;
+        return false; 
     } else {
-        car.outro = modificar;
-        console.log(car.outro);
+
+        let modificar = document.getElementById('modificar').value; 
+        let car = {};
+        let resp = document.getElementById('Modificar');
+        
+        if (radio.value == "Marca") {
+            car.marca = modificar;
+        } else if (radio.value == "Modelo") {
+            car.modelo = modificar;
+        } else if (radio.value == "Ano") {
+            car.ano = modificar;
+        }
+
+        for (let mostra in car) {
+            // Cria um novo elemento <p> para cada propriedade e valor
+            var itens = document.createElement("p");
+    
+            // Define o conteúdo do <p> com a propriedade e valor de 'car'
+            itens.innerHTML = mostra + ": " + car[mostra];
+    
+            // Adiciona o novo <p> ao elemento 'mostrar'
+            resp.appendChild(itens);
+        }
     }
 
-    
+};
+
+function Calculadora(){
+    let numero1 = parseFloat(document.getElementById('numero1').value);
+    let numero2 = parseFloat(document.getElementById('numero2').value);
+    let resultadoSoma = numero1 + numero2;
+
+    let result = document.getElementById('resultado');
+    console.log(resultadoSoma);
+    result.innerHTML = "Resultado da soma é : " + resultadoSoma;
+};
+
+function forLoop(){
+    let meuArray = [10, 'banana', true, null, { nome: 'João' }, [1, 2, 3]];
+
+for (let index in meuArray) {
+  console.log(`Índice ${index}: ${meuArray[index]}`);
+}
+
+}
+
+function objeto(){
+    console.log(Object.keys(car), Object.values(car));
 }
