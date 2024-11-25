@@ -41,9 +41,27 @@ meuset.size();
 6. Iterar Sobre um Set: Use um loop for...of para iterar sobre o seu Set
 e imprimir cada valor.
 */
+for (let index = 0; index < array.length; index++) {
+    const element = array[index];
+    
+}
+
+
 
 /*
 7. Criar um Set a Partir de um Array: Crie um array com alguns valores
 duplicados. Em seguida, crie um Set a partir desse array para remover
 as duplicatas.
 */
+
+const arrayComDuplicatas = [1, 2, 3, 4, 4, 5, 5, 6, 7, 8, 8];
+
+const setSemDuplicatas = new Set(arrayComDuplicatas);
+
+
+const arraySemDuplicatas = [...setSemDuplicatas];
+
+
+console.log('Array com duplicatas:', arrayComDuplicatas);
+console.log('Set (sem duplicatas):', setSemDuplicatas);
+console.log('Array sem duplicatas:', arraySemDuplicatas);
